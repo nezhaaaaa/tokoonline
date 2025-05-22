@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda - Ezando Cap</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Ezando Cap menyediakan topi premium dari brand ternama seperti Prada, Balenciaga, dan LV. Lihat produk unggulan kami di beranda.">
+  <meta name="keywords" content="topi branded, topi original, Ezando Cap, Prada cap, Balenciaga cap, LV cap">
+  <meta name="author" content="Ezando Cap">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    nav a {
+      color: #f1c40f;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    main {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      animation: fadeIn 1s ease;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .product-preview {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      width: 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card .info {
+      padding: 15px;
+    }
+
+    .card .info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+    }
+
+    .card .info .harga {
+      color: #f1c40f;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.3);
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ezando Cap - Topi Branded Premium</h1>
+    <nav>
+      <a href="beranda.html">Beranda</a>
+      <a href="produk.html">Produk</a>
+      <a href="tentang.html">Tentang Kami</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Selamat Datang di Ezando Cap</h2>
+    <p>Kami menyediakan topi premium dari brand ternama dunia dengan kualitas terbaik.</p>
+
+    <div class="product-preview">
+      <!-- Produk 1 -->
+      <div class="card" onclick="redirectToProduk('Balenciaga Logo Cap')">
+        <img src="gambar7.jpg" alt="Balenciaga Logo Cap">
+        <div class="info">
+          <h3>Balenciaga Logo Cap</h3>
+          <p class="harga">Rp 5.500.000</p>
+        </div>
+      </div>
+      <!-- Produk 2 -->
+      <div class="card" onclick="redirectToProduk('Prada Technical Fabric Cap')">
+        <img src="gambar6.jpg" alt="Prada Technical Fabric Cap">
+        <div class="info">
+          <h3>Prada Technical Fabric Cap</h3>
+          <p class="harga">Rp 4.800.000</p>
+        </div>
+      </div>
+      <!-- Produk 3 -->
+      <div class="card" onclick="redirectToProduk('LV Vers Mesh Cap')">
+        <img src="gambar8.jpg" alt="LV Vers Mesh Cap">
+        <div class="info">
+          <h3>LV Vers Mesh Cap</h3>
+          <p class="harga">Rp 12.000.000</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ezando Cap - Toko Topi Branded Premium</p>
+  </footer>
+
+  <script>
+    function redirectToProduk(namaProduk) {
+      localStorage.setItem('produkTerpilih', namaProduk);
+      window.location.href = 'produk.html';
+    }
+  </script>
+</body>
+</html>
